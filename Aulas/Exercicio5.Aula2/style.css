@@ -1,0 +1,41 @@
+body {
+    background-color: #ee0909;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333333;
+}
+
+.perfil {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+
+.tecnologia {
+    color: blue;
+    margin: 10px;
+}
+
+.contato {
+    color: blue;
+    text-decoration: none;
+}
+
+.contato:hover {
+    color: red;
+}
+
+.tecnologias {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+body {
+    background-color: #bbe428;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+    margin-top: 30px;
+}
+
+.cartao {
+    background-color: white;
+    width: 400px;
+    padding: 25px;
+    margin: 40px auto;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.cartao h2 {
+    color: #1e4d8c;
+}
+
+.cartao p {
+    font-size: 16px;
+}
+
+.cartao ul {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.destaque {
+    color: #1e4d8c;
+    font-weight: bold;
+}
+
+.botao {
+    background-color: #1e4d8c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
