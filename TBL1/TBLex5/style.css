@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+    height: 15vh;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.menu {
+    background-color: #333;
+    padding: 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    color: white;
+    padding: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    padding: 20px;
+}
+
+
+.card {
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.vendas {
+    background-color: #007bff;
+}
+
+.usuarios {
+    background-color: #28a745;
+}
+
+.pedidos {
+    background-color: #ffc107;
+}
+
+.estoque {
+    background-color: #17a2b8;
+}
+
+.financeiro {
+    background-color: #6f42c1;
+}
+
+.alertas {
+    background-color: #dc3545;
+}
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
