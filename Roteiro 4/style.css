@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8ef;
+    color: #423c3c;
+}
+
+
+.header {
+    height: 70px;
+    background: #171717;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e85d04;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.cart-button,
+.hero-button,
+.checkout-button {
+    background: #e85d04;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 18px;
+
+    font-weight: bold;
+}
+
+.cart-button b {
+    background: white;
+    color: #e85d04;
+
+    padding: 3px 7px;
+
+    border-radius: 20px;
+}
+
+
+.hero {
+    min-height: 450px;
+
+    background: #1d1d1d;
+    color: white;
+
+    padding: 60px 9%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #ff7b00;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.tag {
+    color: #e85d04;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero-burger img {
+    width: 400px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+.menu {
+    padding: 60px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px #00000015;
+}
+
+
+.foto-produto {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+.card-body {
+    padding: 18px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+}
+
+
+.card-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.add {
+    background: #171717;
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 10px 14px;
+
+    font-weight: bold;
+}
+
+
+.cart {
+    position: fixed;
+
+    right: -430px;
+    top: 0;
+
+    width: 430px;
+    max-width: 100%;
+
+    height: 100vh;
+
+    background: white;
+
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+
+.cart.open {
+    right: 0;
+}
+
+
+.cart-header {
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.close {
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    color: #555;
+}
+
+
+.cart-items {
+    padding: 18px;
+
+    overflow-y: auto;
+
+    flex: 1;
+}
+
+
+.empty {
+    text-align: center;
+
+    color: #777;
+
+    padding: 50px 10px;
+}
+
+
+.cart-item {
+    display: grid;
+
+    grid-template-columns: 60px 1fr auto;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.item-icon {
+    width: 60px;
+    height: 60px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+
+.item-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.item-info h4 {
+    font-size: 15px;
+}
+
+
+.item-info small {
+    color: #777;
+}
+
+
+.qty {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 7px;
+}
+
+
+.qty button {
+    width: 25px;
+    height: 25px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+}
+
+
+.remove {
+    border: none;
+
+    background: none;
+
+    color: red;
+
+    font-size: 12px;
+}
+
+
+.cart-footer {
+    padding: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.checkout-button {
+    width: 100%;
+}
+
+
+.overlay {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #00000099;
+
+    z-index: 20;
+}
+
+
+.overlay.show {
+    display: block;
+}
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 50;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.modal.show {
+    display: flex;
+}
+
+
+.modal-box {
+    background: white;
+
+    width: 480px;
+    max-width: 100%;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+}
+
+
+.modal-box > .close {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+}
+
+
+.modal h2 {
+    font-size: 30px;
+
+    margin: 10px 0 20px;
+}
+
+
+.checkout-summary {
+    background: #f5f5f5;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin: 15px 0;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+.success {
+    text-align: center;
+
+    padding: 30px 10px;
+}
+
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    background: #d9f7e2;
+
+    color: green;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+
+.success p {
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+footer {
+    background: #171717;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .hero {
+        text-align: center;
+
+        padding: 50px 7%;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero-burger {
+        display: none;
+    }
+
+
+    .menu {
+        padding: 50px 5%;
+    }
+
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    .cart {
+        width: 100%;
+    }
+
+}
